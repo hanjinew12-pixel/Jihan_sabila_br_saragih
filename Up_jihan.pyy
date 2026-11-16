@@ -1,0 +1,22 @@
+jumlah = int(input("Jumlah kendaraan: "))
+
+for i in range(1, jumlah + 1):
+    print(f"\nKendaraan ke-{i}")
+    jenis = input("Jenis (motor/mobil/bus): ").lower()
+    jam = float(input("Lama parkir (jam): "))
+    
+    # Tarif
+    if "motor" in jenis: 
+        tarif = 2000
+    elif "mobil" in jenis: 
+        tarif = 5000
+    else: 
+        tarif = 10000
+    
+    # Hitung biaya & tambahan jika > 5 jam
+    total = tarif * jam
+    tambahan = 5000 if jam > 5 else 0
+    total += tambahan
+    
+    # Struk
+    print(f"Total Bayar: Rp{total:,.0f} (Tambahan: Rp{tambahan:,})")
