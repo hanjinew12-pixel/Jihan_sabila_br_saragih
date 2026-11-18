@@ -13,20 +13,6 @@ for i in range(1, jumlah + 1):
         tarif = 5000
     else:
         tarif = 10000
-jumlah = int(input("Jumlah kendaraan: "))
-
-for i in range(1, jumlah + 1):
-    print(f"\nKendaraan ke-{i}")
-    jenis = input("Jenis (motor/mobil/bus): ").lower()
-    jam = float(input("Lama parkir (jam): "))
-
-    # Tarif
-    if "motor" in jenis:
-        tarif = 2000
-    elif "mobil" in jenis:
-        tarif = 5000
-    else:
-        tarif = 10000
 
     # Hitung biaya
     total = tarif * jam
